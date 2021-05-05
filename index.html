@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eva &#8211; Instant Chatbot Creator</title>
+    <meta name="robots" content="max-image-preview:large">
+    <link rel="dns-prefetch" href="//s.w.org">
+    <link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Feed" href="./feed/index.html">
+    <link rel="alternate" type="application/rss+xml" title="My Blog &raquo; Comments Feed" href="./comments/feed/index.html">
+    <script>
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": ".\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.7.1"
+            }
+        };
+        ! function(e, a, t) {
+            var n, r, o, i = a.createElement("canvas"),
+                p = i.getContext && i.getContext("2d");
+
+            function s(e, t) {
+                var a = String.fromCharCode;
+                p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0);
+                e = i.toDataURL();
+                return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+            }
+
+            function c(e) {
+                var t = a.createElement("script");
+                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+            }
+            for (o = Array("flag", "emoji"), t.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, r = 0; r < o.length; r++) t.supports[o[r]] = function(e) {
+                if (!p || !p.fillText) return !1;
+                switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+                    case "flag":
+                        return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]);
+                    case "emoji":
+                        return !s([55357, 56424, 8205, 55356, 57212], [55357, 56424, 8203, 55356, 57212])
+                }
+                return !1
+            }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function() {
+                t.DOMReady = !0
+            }, t.supports.everything || (n = function() {
+                t.readyCallback()
+            }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+                "complete" === a.readyState && t.readyCallback()
+            })), (n = t.source || {}).concatemoji ? c(n.concatemoji) : n.wpemoji && n.twemoji && (c(n.twemoji), c(n.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <style>
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="wp-block-library-css" href="./wp-includes/css/dist/block-library/style.min.css?ver=5.7.1" media="all">
+    <link rel="stylesheet" id="wp-block-library-theme-css" href="./wp-includes/css/dist/block-library/theme.min.css?ver=5.7.1" media="all">
+    <link rel="stylesheet" id="twenty-twenty-one-style-css" href="./wp-content/themes/twentytwentyone/style.css?ver=1.3" media="all">
+    <link rel="stylesheet" id="twenty-twenty-one-print-style-css" href="./wp-content/themes/twentytwentyone/assets/css/print.css?ver=1.3" media="print">
+    <link rel="stylesheet" id="elementor-icons-css" href="./wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.11.0" media="all">
+    <link rel="stylesheet" id="elementor-animations-css" href="./wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.2.2" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" href="./wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.2.2" media="all">
+    <link rel="stylesheet" id="elementor-post-5-css" href="./wp-content/uploads/elementor/css/post-5.css?ver=1620172026" media="all">
+    <link rel="stylesheet" id="elementor-global-css" href="./wp-content/uploads/elementor/css/global.css?ver=1620173338" media="all">
+    <link rel="stylesheet" id="elementor-post-8-css" href="./wp-content/uploads/elementor/css/post-8.css?ver=1620173262" media="all">
+    <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COpen+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=5.7.1"
+        media="all">
+    <link rel="stylesheet" id="elementor-icons-shared-0-css" href="./wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.1" media="all">
+    <link rel="stylesheet" id="elementor-icons-fa-regular-css" href="./wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.1" media="all">
+    <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="./wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.1" media="all">
+    <link rel="stylesheet" id="elementor-icons-fa-brands-css" href="./wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.1" media="all">
+    <link rel="https://api.w.org/" href="./wp-json/index.html">
+    <link rel="alternate" type="application/json" href="./wp-json/wp/v2/pages/8/index.html">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="./xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="./wp-includes/wlwmanifest.xml">
+    <meta name="generator" content="WordPress 5.7.1">
+    <link rel="canonical" href="./index.html">
+    <link rel="shortlink" href="./index.html">
+    <link rel="alternate" type="application/json+oembed" href="./wp-json/oembed/1.0/embed/index.html?url=https%3A%2F%2F%2F">
+    <link rel="alternate" type="text/xml+oembed" href="./wp-json/oembed/1.0/embed/index.html?url=https%3A%2F%2F%2F&#038;format=xml">
+    <style>
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+</head>
+
+<body class="home page-template page-template-elementor_canvas page page-id-8 wp-embed-responsive is-light-theme no-js singular elementor-default elementor-template-canvas elementor-kit-5 elementor-page elementor-page-8">
+    <div data-elementor-type="wp-page" data-elementor-id="8" class="elementor elementor-8" data-elementor-settings="[]">
+        <div class="elementor-section-wrap">
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-253fc96d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="253fc96d" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4e103b4" data-id="4e103b4" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-49bfbdf5 elementor-widget elementor-widget-heading" data-id="49bfbdf5" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Chatbot Saya Menghasilkan Income Otomatis 30an Juta Perbulan, Dan Kini Saya Tidak Pernah Mengurus Chatbotnya Sama Sekali, Tetapi Incomenya Jalan Terus</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-62b7a736 elementor-widget elementor-widget-heading" data-id="62b7a736" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Ikuti Workshop Chatbot Creator Program<br> (Workshop Membuat dan Berbisnis Chatbot)</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-6b09ca63 elementor-align-center elementor-widget elementor-widget-button" data-id="6b09ca63" data-element_type="widget" data-widget_type="button.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-button-wrapper">
+                                        <a href="#down" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-grow" role="button">
+                                            <span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon elementor-align-icon-left">
+				<i aria-hidden="true" class="far fa-bell"></i>			</span>
+                                            <span class="elementor-button-text">Pelajari Detail Workshopnya</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-30c91d38 elementor-widget elementor-widget-heading" data-id="30c91d38" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Bersama EVA.ID</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-602169da elementor-align-center elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="602169da" data-element_type="widget" data-widget_type="icon-list.default">
+                                <div class="elementor-widget-container">
+                                    <ul class="elementor-icon-list-items">
+                                        <li class="elementor-icon-list-item">
+                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+                                            <span class="elementor-icon-list-text">Telah Dipercaya 15 Perusahaan Besar Skala Nasional</span>
+                                        </li>
+                                        <li class="elementor-icon-list-item">
+                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+                                            <span class="elementor-icon-list-text">Menghasilkan 11.000 Chatbot</span>
+                                        </li>
+                                        <li class="elementor-icon-list-item">
+                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+                                            <span class="elementor-icon-list-text">Melayani 22 Juta Chat</span>
+                                        </li>
+                                        <li class="elementor-icon-list-item">
+                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-check"></i>						</span>
+                                            <span class="elementor-icon-list-text">Juara 1 Lomba Start Up Nasional Amvesindo  2017</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-2467e5a4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2467e5a4" data-element_type="section">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5428c389" data-id="5428c389" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-4077be44 elementor-widget elementor-widget-menu-anchor" data-id="4077be44" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                <div class="elementor-widget-container">
+                                    <div id="down" class="elementor-menu-anchor"></div>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-1234b58f elementor-widget elementor-widget-heading" data-id="1234b58f" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">
+                                        <font color="#ED885C">Siapa Kami</font> EVA.ID</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-21be48b4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="21be48b4" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-3eeb4623" data-id="3eeb4623" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-3d515828 elementor-aspect-ratio-169 elementor-widget elementor-widget-video" data-id="3d515828" data-element_type="widget" data-settings="{&quot;youtube_url&quot;:&quot;https:\/\/www.youtube.com\/watch?v=XHOmBV4js_E&quot;,&quot;video_type&quot;:&quot;youtube&quot;,&quot;controls&quot;:&quot;yes&quot;,&quot;aspect_ratio&quot;:&quot;169&quot;}"
+                                                data-widget_type="video.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-wrapper elementor-fit-aspect-ratio elementor-open-inline">
+                                                        <div class="elementor-video"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-1470fd26 elementor-align-left elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1470fd26" data-element_type="widget" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-globe"></i>						</span>
+                                                            <span class="elementor-icon-list-text"><span style="font-weight:bold; color:#ED885C;">15+ Perusahaan besar </span> dari berbagai industri telah menggunakan layanan kami.</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-briefcase"></i>						</span>
+                                                            <span class="elementor-icon-list-text"><span style="font-weight:bold; color:#ED885C;">11.000+ Chatbot </span> Untuk personal maupun organisasi yang dikembangkan menggunakan platform kami.</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-comment-dots"></i>						</span>
+                                                            <span class="elementor-icon-list-text"><span style="font-weight:bold; color:#ED885C;">22JT+ CHAT</span> Terkirim dari Chatbot EVA</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-trophy"></i>						</span>
+                                                            <span class="elementor-icon-list-text"><span style="font-weight:bold; color:#ED885C;">PRESTASI</span> dari berbagai kompetisi telah diraih EVA.ID</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-543bf620 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="543bf620" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-1135c5d4" data-id="1135c5d4" data-element_type="column">
+                                        <div class="elementor-widget-wrap">
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-84cd0f8" data-id="84cd0f8" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-3365f721 elementor-widget elementor-widget-image" data-id="3365f721" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img src="./wp-content/uploads/elementor/thumbs/demoday-p668n8ybmm5q2uvrvonn15q1avrsilfrog5gp7eigw-p6p0mhblob99yell7q11h8x6rmib8gmgsnzht1b7k0.png" title="demoday-p668n8ybmm5q2uvrvonn15q1avrsilfrog5gp7eigw" alt="demoday-p668n8ybmm5q2uvrvonn15q1avrsilfrog5gp7eigw">                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-1194047b" data-id="1194047b" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-56d41b4a elementor-widget elementor-widget-image" data-id="56d41b4a" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="160" height="52" src="./wp-content/uploads/2021/05/kominfo.png" class="attachment-full size-full" alt="" loading="lazy" style="width:100%;height:32.5%;max-width:160px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-502f1909" data-id="502f1909" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-154218a0 elementor-widget elementor-widget-image" data-id="154218a0" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img src="./wp-content/uploads/elementor/thumbs/websummit-p668n64t241v40zvc5frbofniq5ovi4ko2709diozk-p6p0mk548td4x8hhr98x6q7kjs4evjxnt1xy8v711c.png" title="websummit-p668n64t241v40zvc5frbofniq5ovi4ko2709diozk" alt="websummit-p668n64t241v40zvc5frbofniq5ovi4ko2709diozk">                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-36be472" data-id="36be472" data-element_type="column">
+                                        <div class="elementor-widget-wrap">
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-1d923048 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1d923048" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1df6ad2a" data-id="1df6ad2a" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-4b452972 elementor-widget elementor-widget-image" data-id="4b452972" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img src="./wp-content/uploads/elementor/thumbs/evaid-p66bn5ta8vvsz84sqtwpsfe4gdvt7mue6kf95tee4g-p6p0nywehvamc6friv6rxdegml68f7j601665t3rpc.png" title="evaid-p66bn5ta8vvsz84sqtwpsfe4gdvt7mue6kf95tee4g" alt="evaid-p66bn5ta8vvsz84sqtwpsfe4gdvt7mue6kf95tee4g">                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2500d7bf" data-id="2500d7bf" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-39c00050 elementor-widget elementor-widget-heading" data-id="39c00050" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                        <font color="#ED885C">1st Winner</font> on AMVESINDO DEMO DAY 2017</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-221b05b3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="221b05b3" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-8a264a9" data-id="8a264a9" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-7f035363 elementor-widget elementor-widget-image" data-id="7f035363" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="281" height="52" src="./wp-content/uploads/2021/05/amvesindo-p66bn4vg21uinm65wbi37xmnv00fzxqnufrrojfsao-1.jpeg" class="attachment-full size-full" alt="" loading="lazy" style="width:100%;height:18.51%;max-width:281px;">                                                    </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-4dfe17c9 elementor-widget elementor-widget-heading" data-id="4dfe17c9" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Lomba Start Up Yang Diikuti 5500 Peserta Dari Seluruh Indonesia, Dan Eva.id menjadi juara 1
+                                                    </h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7194c799" data-id="7194c799" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-1d1860a8 elementor-widget elementor-widget-image" data-id="1d1860a8" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="1242" height="719" src="./wp-content/uploads/2021/05/amvesindo-2-1.png" class="attachment-full size-full" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/amvesindo-2-1.png 1242w, ./wp-content/uploads/2021/05/amvesindo-2-1-300x174.png 300w, ./wp-content/uploads/2021/05/amvesindo-2-1-1024x593.png 1024w, ./wp-content/uploads/2021/05/amvesindo-2-1-768x445.png 768w"
+                                                        sizes="(max-width: 1242px) 100vw, 1242px" style="width:100%;height:57.89%;max-width:1242px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-a8e1b04 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a8e1b04" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-42d5d117" data-id="42d5d117" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-1f682451 elementor-widget elementor-widget-heading" data-id="1f682451" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">EVA.ID menjadi salah satu dari 44 Startup yang diproyeksikan sebagai calon Unicorn di Indonesia</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-10248a8b elementor-widget elementor-widget-image" data-id="10248a8b" data-element_type="widget" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img width="750" height="375" src="./wp-content/uploads/2021/05/Picture1-1024x512-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Picture1-1024x512-1.png 1024w, ./wp-content/uploads/2021/05/Picture1-1024x512-1-300x150.png 300w, ./wp-content/uploads/2021/05/Picture1-1024x512-1-768x384.png 768w"
+                                        sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:50%;max-width:1024px;"> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-f3f514d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f3f514d" data-element_type="section">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1a201f03" data-id="1a201f03" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-5aced054 elementor-widget elementor-widget-menu-anchor" data-id="5aced054" data-element_type="widget" data-widget_type="menu-anchor.default">
+                                <div class="elementor-widget-container">
+                                    <div id="down" class="elementor-menu-anchor"></div>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-41db8e4b elementor-widget elementor-widget-heading" data-id="41db8e4b" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">
+                                        <font color="#ED885C">Artificial Intelligence (AI), </font> Memiliki Potensi Luas dan Tak Terbatas</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-7dbd2e78 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7dbd2e78" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-12306a2a" data-id="12306a2a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-51b35382 elementor-widget elementor-widget-text-editor" data-id="51b35382" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>Artificial Intelligence (AI) dalam bahasa kita dikenal dengan kecerdasan buatan. AI adalah teknologi yang berkembang pesat dan banyak diimplementasikan dalam beragam bidang. Salah satu penerapan AI adalah
+                                                        dalam <strong>Chatbot</strong>, salah satu interface yang diprediksi akan merevolusi cara kita mengakses komputer.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-3a8e69c3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3a8e69c3" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-6cc0ef03" data-id="6cc0ef03" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-45d9de8c elementor-widget elementor-widget-image" data-id="45d9de8c" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="750" height="490" src="./wp-content/uploads/2021/05/ceo-microsoft.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/ceo-microsoft.jpeg 1003w, ./wp-content/uploads/2021/05/ceo-microsoft-300x196.jpeg 300w, ./wp-content/uploads/2021/05/ceo-microsoft-768x502.jpeg 768w"
+                                                        sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:65.3%;max-width:1003px;"> </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-7ba516d elementor-widget elementor-widget-text-editor" data-id="7ba516d" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>“<em>Hampir semua orang yang membangun aplikasi, baik berupa aplikasi mobile, dekstop, maupun website, nantinya akan membuat chat bot sebagai cara berkomunikasi antara pengguna dengan aplikasi tersebut. Chatbot akan menggantikan Menu berupa link yang biasa digunakan saat ini</em>”
+                                                        – <strong>CEO Microsoft dalam WPC di 2016. </strong></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="elementor-element elementor-element-19c60790 elementor-widget elementor-widget-heading" data-id="19c60790" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Gan, Stop Pikir-Pikir, Kecerdasan Buatan Tak Serumit Itu, Pelajari Sekarang!</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-2db396c8 elementor-widget elementor-widget-heading" data-id="2db396c8" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Kini Saatnya Menguasai Fungsi dan Mengambil Benefit AI Untuk Bisnis Anda Sendiri di Era 4.0 Ini</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-4cfb90e8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4cfb90e8" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3076e42f" data-id="3076e42f" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-7f54870d elementor-widget elementor-widget-heading" data-id="7f54870d" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">MARI BERGABUNG DI</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-3fc5e97 elementor-widget elementor-widget-heading" data-id="3fc5e97" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Workshop Digital Entrepreneur</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-553de367 elementor-widget elementor-widget-heading" data-id="553de367" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Chatbot Creator Program (C2P)</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-4779a30 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4779a30" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-13810c5a" data-id="13810c5a" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-60ee3ecc elementor-widget elementor-widget-text-editor" data-id="60ee3ecc" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>Workshop yang dikemas untuk memfasilitasi Anda agar bisa membuat dan berbisnis chatbot dengan memanfaatkan teknologi kecerdasan buatan (artificial intelligent). Workshop fleksibel, dengan pemateri chatbot
+                                                        developer berpengalaman.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-2e869192 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2e869192" data-element_type="section">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-315bea4e" data-id="315bea4e" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-11640d6 elementor-widget elementor-widget-heading" data-id="11640d6" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Manfaat Yang Anda Dapatkan Jika Bergabung dan Menyelesaikan
+                                        <font color="#ED885C"> Workshop C2P</font>
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-2c29fd5b elementor-widget elementor-widget-heading" data-id="2c29fd5b" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Manfaat Berbisnis Chatbot sekaligus Manfaat Chatbot untuk Bisnis Anda, Dapatkan Sekarang!</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-954cae0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="954cae0" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-25dd4cf2" data-id="25dd4cf2" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-3391aea0 elementor-widget elementor-widget-image" data-id="3391aea0" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="750" height="432" src="./wp-content/uploads/2021/05/ilustrasi_eva_multi_apps_one_dashboard-1024x590-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/ilustrasi_eva_multi_apps_one_dashboard-1024x590-1.png 1024w, ./wp-content/uploads/2021/05/ilustrasi_eva_multi_apps_one_dashboard-1024x590-1-300x173.png 300w, ./wp-content/uploads/2021/05/ilustrasi_eva_multi_apps_one_dashboard-1024x590-1-768x443.png 768w"
+                                                        sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:57.62%;max-width:1024px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-be50a28" data-id="be50a28" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-1b7d671a elementor-widget elementor-widget-heading" data-id="1b7d671a" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Manfaat Berbisnis Chatbot :</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-19b8b685 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="19b8b685" data-element_type="widget" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Bisa Menghasilkan Uang Dengan Bisnis Chatbot (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Pemahaman tentang besarnya potensi bisnis dari chatbot, dan bagaimana cara meraih peluang ini (senilai Rp 500.000,-).</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Pengetahuan berkaitan dengan teknik membangun penghasil uang otomatis dari chatbot sebagai ladang bisnis (senilai Rp 300.000,-).</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Wawasan mengenai cara menghasilkan uang melalui copy-paste dalam memanfaatkan bisnis chatbot (senilai Rp 300.000,-).</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-185209ca elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="185209ca" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-71657c88" data-id="71657c88" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-62edded8 elementor-widget elementor-widget-heading" data-id="62edded8" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Manfaat untuk Bisnis Anda :</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-6328308 elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6328308" data-element_type="widget" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Memanfaatkan Chatbot Untuk Customer Service Bisnis Anda (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Membuat Asisten Digital Chatbot Pribadi Yang Berfungsi Menyimpan dan mengelola dokumen-dokumen penting Anda, Mengingatkan jadwal-jadwal Anda dan rekan-rekan Anda, Mencatat hal-hal penting, Mencarikan info-info buat Anda, dll. (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Membuat Chatbot untuk Mesin penjawab otomatis toko online. (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Membuat chatbot untuk Mewakili Anda melayani fans, murid atau komunitas Anda. (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Bisa Membuat Chatbot Di WhatsApp  (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Bisa Membuat Chatbot Di Facebook Messenger (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Bisa Membuat Chatbot Di Website Untuk Customer Service Online (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Bisa Membuat Chatbot Di LINE (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Bisa Membuat Chatbot Di Mobile Apps (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Merancang Percakapan Chatbot Sehingga Bisa Menjadi Layanan Pelanggan Otomatis. (senilai Rp. 500.000,-)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-32f27827" data-id="32f27827" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-47577df5 elementor-widget elementor-widget-heading" data-id="47577df5" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Anda Hanya Perlu Membayar</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-ae5ffaf elementor-widget elementor-widget-heading" data-id="ae5ffaf" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                        <del>Rp 6.600.000,- </del> <br> Rp 500.000,-</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-4e675bb4 elementor-widget elementor-widget-heading" data-id="4e675bb4" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Khusus Untuk 20 Orang Pendaftar Pertama Hari Ini <br> Kami Berikan Promo Pendaftaran <br> cukup membayar</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-5469f143 elementor-widget elementor-widget-heading" data-id="5469f143" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">
+                                                        <del>Rp 500.000,- </del> <br>Rp 250.000,-</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-7df0d59d elementor-widget elementor-widget-heading" data-id="7df0d59d" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Dapatkan Kesempatan Memiliki Kaos “Chatbot Developer” untuk 10 Peserta Pertama</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-78da0c06 elementor-widget elementor-widget-heading" data-id="78da0c06" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Daftar Sekarang via WhatsApp</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-3d9b8195 elementor-align-center elementor-widget elementor-widget-button" data-id="3d9b8195" data-element_type="widget" data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a href="https://api.whatsapp.com/send?phone=62895631999752&#038;text=Halo%20gan%2C%20Saya%20tertarik%20gabung%20workshopnya%20mohon%20dibantu" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-grow" role="button">
+                                                            <span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon elementor-align-icon-left">
+				<i aria-hidden="true" class="fab fa-whatsapp"></i>			</span>
+                                                            <span class="elementor-button-text">Menarik, Saya Ingin Mendaftar!</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-4ef23c67 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4ef23c67" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2d584fd6" data-id="2d584fd6" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-198cf1ca elementor-widget elementor-widget-heading" data-id="198cf1ca" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Berbisnis Chatbot Sangat Menjanjikan</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-7a71d52f elementor-widget elementor-widget-heading" data-id="7a71d52f" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Beberapa Chatbot Telah Terjual Ke Perusahaan-Perusahaan Terkemuka di Indonesia</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-2d99fbe5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2d99fbe5" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-ddeb643" data-id="ddeb643" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-4d16fbf4 elementor-pagination-position-inside elementor-arrows-position-inside elementor-widget elementor-widget-image-carousel" data-id="4d16fbf4" data-element_type="widget" data-settings="{&quot;slides_to_show&quot;:&quot;1&quot;,&quot;navigation&quot;:&quot;both&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;effect&quot;:&quot;slide&quot;,&quot;speed&quot;:500}"
+                                                data-widget_type="image-carousel.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-image-carousel-wrapper swiper-container" dir="ltr">
+                                                        <div class="elementor-image-carousel swiper-wrapper">
+                                                            <div class="swiper-slide">
+                                                                <figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/05/Prodia-Deal.png" alt="Prodia-Deal"></figure>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/05/POS-DEAL-1.png" alt="POS-DEAL-1"></figure>
+                                                            </div>
+                                                            <div class="swiper-slide">
+                                                                <figure class="swiper-slide-inner"><img class="swiper-slide-image" src="./wp-content/uploads/2021/05/BNI-DEAL.png" alt="BNI-DEAL"></figure>
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-pagination"></div>
+                                                        <div class="elementor-swiper-button elementor-swiper-button-prev">
+                                                            <i class="eicon-chevron-left" aria-hidden="true"></i>
+                                                            <span class="elementor-screen-only">Previous</span>
+                                                        </div>
+                                                        <div class="elementor-swiper-button elementor-swiper-button-next">
+                                                            <i class="eicon-chevron-right" aria-hidden="true"></i>
+                                                            <span class="elementor-screen-only">Next</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <div class="elementor-element elementor-element-370ccab2 elementor-widget elementor-widget-heading" data-id="370ccab2" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">EVA di Majalah SWA Edisi 29 November – 9 Desember 2018</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-72504401 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="72504401" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2acbb371" data-id="2acbb371" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-41716970 elementor-widget elementor-widget-image" data-id="41716970" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="750" height="786" src="./wp-content/uploads/2021/05/SWA1-977x1024-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/SWA1-977x1024-1.png 977w, ./wp-content/uploads/2021/05/SWA1-977x1024-1-286x300.png 286w, ./wp-content/uploads/2021/05/SWA1-977x1024-1-768x805.png 768w"
+                                                        sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:104.81%;max-width:977px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-57eba79e" data-id="57eba79e" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-4246ee57 elementor-widget elementor-widget-image" data-id="4246ee57" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="750" height="480" src="./wp-content/uploads/2021/05/SWA2-1024x656-1.png" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/SWA2-1024x656-1.png 1024w, ./wp-content/uploads/2021/05/SWA2-1024x656-1-300x192.png 300w, ./wp-content/uploads/2021/05/SWA2-1024x656-1-768x492.png 768w"
+                                                        sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:64.06%;max-width:1024px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-3ec658be elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3ec658be" data-element_type="section">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-54251a6a" data-id="54251a6a" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-6cb4b5ac elementor-widget elementor-widget-heading" data-id="6cb4b5ac" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Begitu Besar Potensi Bisnis Ini, Dan Saya Sudah Membuktikannya,
+                                        <font color="#ED885C">Walaupun Saya Sama Sekali Tidak Mengerti Pemrograman Yang Rumit,</font> Cukup Mengikuti Workshop Ini, dan Anda Bisa Mengikuti Jejak Saya</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-33550041 elementor-widget elementor-widget-heading" data-id="33550041" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Anda Harus Mengikuti Workshop Ini Terutama Jika Anda Adalah :</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-431b49a5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="431b49a5" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-6c01419b" data-id="6c01419b" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-1f507c7d elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="1f507c7d" data-element_type="widget" data-widget_type="icon-list.default">
+                                                <div class="elementor-widget-container">
+                                                    <ul class="elementor-icon-list-items">
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Pemilik Toko Online (Untuk Menjawab Pelanggan Real Time Otomatis 24 Jam)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Pemilik Bisnis (Untuk Menjawab Pelanggan Real Time Otomatis 24 Jam)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Manager IT (Merancang Sistem Pelayanan Online Dengan Teknologi Chatbot Dan Kecerdasan Buatan)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Manager Pelayanan Pelanggan (Monitoring Pelayanan Pelanggan Dengan Teknologi Chatbot Dan Kecerdasan Buatan)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Web Developer (Membangun Layanan Chat Otomatis Di Web Yang Dibuat)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Dosen (Sebagai Asisten Digital Untuk Mengelola dan Mengajar Mahasiswa)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Public Figure (Sebagai Asisten Digital Untuk Mengelola Fans / Follower)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Marketing (Untuk Menjawab Calon Pelanggan Real Time Otomatis 24 Jam)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Pejabat Pemerintah (Sebagai Asisten Digital Pemerintah Untuk Pelayanan Masyarakat)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Pengelola Komunitas (Sebagai Asisten Digital Untuk Mengelola Komunitas)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Pengurus Koperasi (Untuk Menjawab Anggota Koperasi Real Time Otomatis 24 Jam)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Mahasiswa (Untuk Belajar Teknologi Masa Depan Yang Bermanfaat Untuk Karir Bisnis)</span>
+                                                        </li>
+                                                        <li class="elementor-icon-list-item">
+                                                            <span class="elementor-icon-list-icon">
+							<i aria-hidden="true" class="fas fa-chevron-circle-right"></i>						</span>
+                                                            <span class="elementor-icon-list-text">Yang Sedang Mencari Bisnis Online Masa Depan (Sebagai Peluang Mendapatkan Income Hanya Dengan Copy Paste)</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-799d0901 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="799d0901" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e847def" data-id="e847def" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-5c4a5e9a elementor-widget elementor-widget-heading" data-id="5c4a5e9a" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Workshop C2P Ini Sangat Sayang untuk Anda Lewatkan</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-7393e090 elementor-widget elementor-widget-heading" data-id="7393e090" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Melalui Besaran Investasi yang Terjangkau, Anda Bisa Merasakan 4 Keunggulannya</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-1f5e0ca9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f5e0ca9" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-1fdaba9e" data-id="1fdaba9e" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-2ae6d40b elementor-widget elementor-widget-heading" data-id="2ae6d40b" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Sangat Fungsional</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-4d1a2b36 elementor-widget elementor-widget-text-editor" data-id="4d1a2b36" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>Ilmu terkait AI dan skill membangun Chatbot sangatlah berguna. Anda bisa menerapkan Chatbot buatan Anda untuk kepentingan bisnis di berbagai bidang: Travel, News, Beverages, Social, Goverenment, dan
+                                                        lainnya, sebagaimana ilustrasi berikut ini</p>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-104e46da elementor-widget elementor-widget-image" data-id="104e46da" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="778" height="432" src="./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-11.33.45-AM.jpeg" class="attachment-full size-full" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-11.33.45-AM.jpeg 778w, ./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-11.33.45-AM-300x167.jpeg 300w, ./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-11.33.45-AM-768x426.jpeg 768w"
+                                                        sizes="(max-width: 778px) 100vw, 778px" style="width:100%;height:55.53%;max-width:778px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-229cba7a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="229cba7a" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-6fb9493f" data-id="6fb9493f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-64e827b6 elementor-widget elementor-widget-heading" data-id="64e827b6" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Penyelenggara Handal</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-1b229f29 elementor-widget elementor-widget-text-editor" data-id="1b229f29" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>Workshop C2P ini diselenggarakan bersama praktisi handal dari <strong>EVA.ID</strong>, yang merupakan salah satu chatbot developer terkemuka di Indonesia, dengan banyak portofolio berkualitas.</p>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-27a400 elementor-widget elementor-widget-image" data-id="27a400" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="750" height="191" src="./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-11.36.10-AM.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-11.36.10-AM.jpeg 751w, ./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-11.36.10-AM-300x76.jpeg 300w"
+                                                        sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:25.43%;max-width:751px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-2a07ac6c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2a07ac6c" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-590c797c" data-id="590c797c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-613089da elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-id="613089da" data-element_type="widget" data-widget_type="icon.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-icon-wrapper">
+                                                        <div class="elementor-icon">
+                                                            <i aria-hidden="true" class="fas fa-chalkboard-teacher"></i> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-384b6150 elementor-widget elementor-widget-heading" data-id="384b6150" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Workshop Fleksibel</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-757873ea elementor-widget elementor-widget-text-editor" data-id="757873ea" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>Siapapun dan apapun latarbelakang Anda, tidak akan membatasi kesempatan untuk bergabung di workshop ini. Penyelenggaraannya Fleksibel, dalam 2 hari selama 3 jam secara online, dan Anda hanya perlu mempersiapkan
+                                                        laptop dan koneksi internet.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-3742adf" data-id="3742adf" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-3550ae60 elementor-view-stacked elementor-shape-circle elementor-widget elementor-widget-icon" data-id="3550ae60" data-element_type="widget" data-widget_type="icon.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-icon-wrapper">
+                                                        <div class="elementor-icon">
+                                                            <i aria-hidden="true" class="fas fa-hand-holding-usd"></i> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-2e06e48d elementor-widget elementor-widget-heading" data-id="2e06e48d" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Terjangkau</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-6ba930fe elementor-widget elementor-widget-text-editor" data-id="6ba930fe" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>Workshop C2P terjangkau dari segi biaya, fasilitas, dan penyampaian materi. Workshop C2P ini disampaikan oleh praktisi sehingga materinya mudah dipahami, fasilitasnya sudah Andamiliki, dan biayanya pasti
+                                                        terjangkau karena kami ingin melahirkan lebih banyak pengusaha di bidang digital. Anda adalah salah satunya!</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-5d49170a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5d49170a" data-element_type="section">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-24d66377" data-id="24d66377" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-2a085e8d elementor-widget elementor-widget-heading" data-id="2a085e8d" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Masih Berpikir Bahwa
+                                        <font color="#ED885C"> Mempelajari AI dan Membuat Chatbot</font> Itu Rumit? </h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-4029812f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4029812f" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-2aca18fe" data-id="2aca18fe" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-6881e783 elementor-widget elementor-widget-text-editor" data-id="6881e783" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>Tidak akan terasa rumit untuk Anda, dengan catatan Anda sudah menguasai dasar-dasar penggunaan komputer, sosial media, dan familiar dengan internet.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-5c400030 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5c400030" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-3ce32fbd" data-id="3ce32fbd" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-65ec2256 elementor-widget elementor-widget-heading" data-id="65ec2256" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Bergabung di Workshop C2P, Anda Tidak Akan Rugi!</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-4ba007a7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4ba007a7" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-1c97fd34" data-id="1c97fd34" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-489efb7 elementor-widget elementor-widget-text-editor" data-id="489efb7" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <p>Kami menghadirkan Workshop dengan <strong>GARANSI UANG KEMBALI</strong>, jika setelah mengikuti workshop ini Anda belum memiliki chatbot dan belum bisa membuat chatbot secara mandiri.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-5fe23ec4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5fe23ec4" data-element_type="section">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-20fa75a9" data-id="20fa75a9" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-c9eb8ab elementor-widget elementor-widget-heading" data-id="c9eb8ab" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">
+                                        <font color="#ED885C">Praktisi Chatbot Developer dari EVA.ID</font> Memiliki Portofolio Mengesankan</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-7b4cad18 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7b4cad18" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-73e23795" data-id="73e23795" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-e8e0878 elementor-widget elementor-widget-image" data-id="e8e0878" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="575" height="525" src="./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-1.06.38-PM-1.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-1.06.38-PM-1.jpeg 575w, ./wp-content/uploads/2021/05/WhatsApp-Image-2021-04-15-at-1.06.38-PM-1-300x274.jpeg 300w"
+                                                        sizes="(max-width: 575px) 100vw, 575px" style="width:100%;height:91.3%;max-width:575px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-5ac505ca elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5ac505ca" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-62cd0a6" data-id="62cd0a6" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-98eff90 elementor-widget elementor-widget-heading" data-id="98eff90" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Sebagaimana Pengalaman Terbaik Saya Berbisnis Chatbot,
+                                        <font color="#ED885C"> Inilah Testimoni </font>dari Rekan-Rekan Kita</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-34f2a397 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="34f2a397" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-65faf747" data-id="65faf747" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-31001685 elementor-widget elementor-widget-image" data-id="31001685" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="557" height="352" src="./wp-content/uploads/2021/05/Testi1.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Testi1.jpeg 557w, ./wp-content/uploads/2021/05/Testi1-300x190.jpeg 300w" sizes="(max-width: 557px) 100vw, 557px"
+                                                        style="width:100%;height:63.2%;max-width:557px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6a99baf2" data-id="6a99baf2" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-63282c33 elementor-widget elementor-widget-image" data-id="63282c33" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="553" height="348" src="./wp-content/uploads/2021/05/Testi2.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Testi2.jpeg 553w, ./wp-content/uploads/2021/05/Testi2-300x189.jpeg 300w" sizes="(max-width: 553px) 100vw, 553px"
+                                                        style="width:100%;height:62.93%;max-width:553px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-3f5def6d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3f5def6d" data-element_type="section">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-215e2f94" data-id="215e2f94" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-25e58891 elementor-widget elementor-widget-heading" data-id="25e58891" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Workshop PCE (Professional Chatbot Entrepreneur)</h2>
+                                </div>
+                            </div>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-349d0956 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="349d0956" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a51f900" data-id="a51f900" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-52915ca9 elementor-widget elementor-widget-heading" data-id="52915ca9" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Untuk Anda yang Telah Qualified, Anda bisa Gratis mendapatkan pelatihan PCE ini dan mendapatkan Sertifikat dari TELKOM dan Bisa memasarkan chatbot ke korporat-korporat besar.</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-21b89638" data-id="21b89638" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-60903752 elementor-widget elementor-widget-image" data-id="60903752" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="750" height="530" src="./wp-content/uploads/2021/05/Sertifikat-Profesional-1024x724-1.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Sertifikat-Profesional-1024x724-1.jpeg 1024w, ./wp-content/uploads/2021/05/Sertifikat-Profesional-1024x724-1-300x212.jpeg 300w, ./wp-content/uploads/2021/05/Sertifikat-Profesional-1024x724-1-768x543.jpeg 768w"
+                                                        sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:70.7%;max-width:1024px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-5ae828ad elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5ae828ad" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-125312c7" data-id="125312c7" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-7694fcef elementor-widget elementor-widget-image" data-id="7694fcef" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="455" height="149" src="./wp-content/uploads/2021/05/Logo-Eva.png" class="attachment-full size-full" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Logo-Eva.png 455w, ./wp-content/uploads/2021/05/Logo-Eva-300x98.png 300w" sizes="(max-width: 455px) 100vw, 455px"
+                                                        style="width:100%;height:32.75%;max-width:455px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-7da348d7" data-id="7da348d7" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-1758c4f7 elementor-widget elementor-widget-image" data-id="1758c4f7" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="502" height="150" src="./wp-content/uploads/2021/05/Logo-Metranet.png" class="attachment-full size-full" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Logo-Metranet.png 502w, ./wp-content/uploads/2021/05/Logo-Metranet-300x90.png 300w"
+                                                        sizes="(max-width: 502px) 100vw, 502px" style="width:100%;height:29.88%;max-width:502px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-290d044b" data-id="290d044b" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-2dd4b421 elementor-widget elementor-widget-image" data-id="2dd4b421" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="378" height="131" src="./wp-content/uploads/2021/05/Logo-TelkomU.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Logo-TelkomU.jpeg 378w, ./wp-content/uploads/2021/05/Logo-TelkomU-300x104.jpeg 300w"
+                                                        sizes="(max-width: 378px) 100vw, 378px" style="width:100%;height:34.66%;max-width:378px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-74455a36" data-id="74455a36" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-67d8ccef elementor-widget elementor-widget-image" data-id="67d8ccef" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img src="./wp-content/uploads/elementor/thumbs/Logo-Kerja-Indonesia-p666vsuib7bcbau2wzn34locgdubewi14dtap8bchs-p6p16eigiwjfxrgcfkc985iaofntubno18op5klzpc.png" title="Logo-Kerja-Indonesia-p666vsuib7bcbau2wzn34locgdubewi14dtap8bchs" alt="Logo-Kerja-Indonesia-p666vsuib7bcbau2wzn34locgdubewi14dtap8bchs">                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-497db1a4 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="497db1a4" data-element_type="section">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-30970ac7" data-id="30970ac7" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-7ea337b4 elementor-widget elementor-widget-image" data-id="7ea337b4" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="750" height="422" src="./wp-content/uploads/2021/05/Foto-Acara-1024x576-1.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Foto-Acara-1024x576-1.jpeg 1024w, ./wp-content/uploads/2021/05/Foto-Acara-1024x576-1-300x169.jpeg 300w, ./wp-content/uploads/2021/05/Foto-Acara-1024x576-1-768x432.jpeg 768w"
+                                                        sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:56.25%;max-width:1024px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-597ca277" data-id="597ca277" data-element_type="column">
+                                        <div class="elementor-widget-wrap elementor-element-populated">
+                                            <div class="elementor-element elementor-element-312f9779 elementor-widget elementor-widget-image" data-id="312f9779" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <img width="750" height="422" src="./wp-content/uploads/2021/05/Foto-Workshop-1024x576-2.jpeg" class="attachment-large size-large" alt="" loading="lazy" srcset="./wp-content/uploads/2021/05/Foto-Workshop-1024x576-2.jpeg 1024w, ./wp-content/uploads/2021/05/Foto-Workshop-1024x576-2-300x169.jpeg 300w, ./wp-content/uploads/2021/05/Foto-Workshop-1024x576-2-768x432.jpeg 768w"
+                                                        sizes="(max-width: 750px) 100vw, 750px" style="width:100%;height:56.25%;max-width:1024px;"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-7518fa88 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7518fa88" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-background-overlay"></div>
+                <div class="elementor-container elementor-column-gap-default">
+                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-79d767bb" data-id="79d767bb" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-653d9a49 elementor-widget elementor-widget-heading" data-id="653d9a49" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Sudah Penasaran, Seberapa Terjangkaunya Workshop Ini?</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-78702713 elementor-widget elementor-widget-heading" data-id="78702713" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Anda Hanya Perlu Membayar</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-12b5281f elementor-widget elementor-widget-heading" data-id="12b5281f" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">
+                                        <del>Rp 6.600.000,- </del> <br> Rp 500.000,-</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-f7087ae elementor-widget elementor-widget-heading" data-id="f7087ae" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Khusus Untuk 20 Orang Pendaftar Pertama Hari Ini <br> Kami Berikan Promo Pendaftaran <br> cukup membayar</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-2be8c667 elementor-widget elementor-widget-heading" data-id="2be8c667" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">
+                                        <del>Rp 500.000,- </del> <br>Rp 250.000,-</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-40c769ac elementor-widget elementor-widget-heading" data-id="40c769ac" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Dapatkan Kesempatan Memiliki Kaos “Chatbot Developer” untuk 10 Peserta Pertama</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-3b3f9e3e elementor-widget elementor-widget-heading" data-id="3b3f9e3e" data-element_type="widget" data-widget_type="heading.default">
+                                <div class="elementor-widget-container">
+                                    <h2 class="elementor-heading-title elementor-size-default">Daftar Sekarang via WhatsApp</h2>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-4e929dc8 elementor-align-center elementor-widget elementor-widget-button" data-id="4e929dc8" data-element_type="widget" data-widget_type="button.default">
+                                <div class="elementor-widget-container">
+                                    <div class="elementor-button-wrapper">
+                                        <a href="https://api.whatsapp.com/send?phone=62895631999752&#038;text=Halo%20gan%2C%20Saya%20tertarik%20gabung%20workshopnya%20mohon%20dibantu" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-grow" role="button">
+                                            <span class="elementor-button-content-wrapper">
+						<span class="elementor-button-icon elementor-align-icon-left">
+				<i aria-hidden="true" class="fab fa-whatsapp"></i>			</span>
+                                            <span class="elementor-button-text">Menarik, Saya Ingin Mendaftar!</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-element elementor-element-51d10bff elementor-widget elementor-widget-text-editor" data-id="51d10bff" data-element_type="widget" data-widget_type="text-editor.default">
+                                <div class="elementor-widget-container">
+                                    <p>Powered by <span style="color: #ff9900;"><a style="color: #ff9900;" href="https://creativy.id/jasa-buat-lp/">Creativy</a></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        document.body.classList.remove("no-js");
+    </script>
+    <script>
+        if (-1 !== navigator.userAgent.indexOf('MSIE') || -1 !== navigator.appVersion.indexOf('Trident/')) {
+            document.body.classList.add('is-IE');
+        }
+    </script>
+    <script id="twenty-twenty-one-ie11-polyfills-js-after">
+        (Element.prototype.matches && Element.prototype.closest && window.NodeList && NodeList.prototype.forEach) || document.write('<script src="./wp-content/themes/twentytwentyone/assets/js/polyfills.js?ver=1.3"><\/scr' + 'ipt>');
+    </script>
+    <script src="./wp-content/themes/twentytwentyone/assets/js/responsive-embeds.js?ver=1.3" id="twenty-twenty-one-responsive-embeds-script-js"></script>
+    <script src="./wp-includes/js/wp-embed.min.js?ver=5.7.1" id="wp-embed-js"></script>
+    <script src="./wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.2.2" id="elementor-webpack-runtime-js"></script>
+    <script src="./wp-includes/js/jquery/jquery.min.js?ver=3.5.1" id="jquery-core-js"></script>
+    <script src="./wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+    <script src="./wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.2.2" id="elementor-frontend-modules-js"></script>
+    <script src="./wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+    <script src="./wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" id="jquery-ui-core-js"></script>
+    <script src="./wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6" id="swiper-js"></script>
+    <script src="./wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.2.2" id="share-link-js"></script>
+    <script src="./wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1" id="elementor-dialog-js"></script>
+    <script id="elementor-frontend-js-before">
+        var elementorFrontendConfig = {
+            "environmentMode": {
+                "edit": false,
+                "wpPreview": false,
+                "isScriptDebug": false
+            },
+            "i18n": {
+                "shareOnFacebook": "Share on Facebook",
+                "shareOnTwitter": "Share on Twitter",
+                "pinIt": "Pin it",
+                "download": "Download",
+                "downloadImage": "Download image",
+                "fullscreen": "Fullscreen",
+                "zoom": "Zoom",
+                "share": "Share",
+                "playVideo": "Play Video",
+                "previous": "Previous",
+                "next": "Next",
+                "close": "Close"
+            },
+            "is_rtl": false,
+            "breakpoints": {
+                "xs": 0,
+                "sm": 480,
+                "md": 768,
+                "lg": 1025,
+                "xl": 1440,
+                "xxl": 1600
+            },
+            "responsive": {
+                "breakpoints": {
+                    "mobile": {
+                        "label": "Mobile",
+                        "value": 767,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "mobile_extra": {
+                        "label": "Mobile Extra",
+                        "value": 880,
+                        "direction": "max",
+                        "is_enabled": false
+                    },
+                    "tablet": {
+                        "label": "Tablet",
+                        "value": 1024,
+                        "direction": "max",
+                        "is_enabled": true
+                    },
+                    "tablet_extra": {
+                        "label": "Tablet Extra",
+                        "value": 1365,
+                        "direction": "max",
+                        "is_enabled": false
+                    },
+                    "laptop": {
+                        "label": "Laptop",
+                        "value": 1620,
+                        "direction": "max",
+                        "is_enabled": false
+                    },
+                    "widescreen": {
+                        "label": "Widescreen",
+                        "value": 2400,
+                        "direction": "min",
+                        "is_enabled": false
+                    }
+                }
+            },
+            "version": "3.2.2",
+            "is_static": false,
+            "experimentalFeatures": {
+                "e_dom_optimization": true,
+                "a11y_improvements": true,
+                "landing-pages": true
+            },
+            "urls": {
+                "assets": ".\/wp-content\/plugins\/elementor\/assets\/"
+            },
+            "settings": {
+                "page": [],
+                "editorPreferences": []
+            },
+            "kit": {
+                "active_breakpoints": ["viewport_mobile", "viewport_tablet"],
+                "global_image_lightbox": "yes",
+                "lightbox_enable_counter": "yes",
+                "lightbox_enable_fullscreen": "yes",
+                "lightbox_enable_zoom": "yes",
+                "lightbox_enable_share": "yes",
+                "lightbox_title_src": "title",
+                "lightbox_description_src": "description"
+            },
+            "post": {
+                "id": 8,
+                "title": "My%20Blog%20%E2%80%93%20My%20WordPress%20Blog",
+                "excerpt": "",
+                "featuredImage": false
+            }
+        };
+    </script>
+    <script src="./wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.2.2" id="elementor-frontend-js"></script>
+    <script src="./wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.2.2" id="preloaded-modules-js"></script>
+    <script>
+        /(trident|msie)/i.test(navigator.userAgent) && document.getElementById && window.addEventListener && window.addEventListener("hashchange", (function() {
+            var t, e = location.hash.substring(1);
+            /^[A-z0-9_-]+$/.test(e) && (t = document.getElementById(e)) && (/^(?:a|select|input|button|textarea)$/i.test(t.tagName) || (t.tabIndex = -1), t.focus())
+        }), !1);
+    </script>
+</body>
+
+
+<!-- Page generated by LiteSpeed Cache 3.6.4 on 2021-05-05 00:08:58 -->
+
+</html>
